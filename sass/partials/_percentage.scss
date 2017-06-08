@@ -1,0 +1,26 @@
+section.start{
+    height: 400vh;
+}
+
+.percentage{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .map{
+        width: calc(98% - 100px);
+        margin: 0 auto;
+    }
+}
+
+.msg{
+    background: rgba(black, .7);
+    position: absolute;
+    top: 200vh;
+    left: 0;
+    width: 100%;
+    color: white;
+    @include flexbox(row, wrap, center, center);
+    opacity: 0;
+}

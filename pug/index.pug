@@ -1,0 +1,72 @@
+- var page = { title: "Infografik: Hotspot Afrika", subtitle: "Keep Calm oder Grund zur Panik?", author: "Myriam Frisano", description: "Eine Interaktive Infografik enstanden im MMP Studium"}
+
+doctype html
+html(lang="de")
+    include includes/head.pug
+
+    body.combo
+        .title
+            h1 Hotspot Afrika
+            h2 Keep calm oder Grund zur Panik?    
+        section.start
+            .percentage
+                .map
+                    .svg-responsive
+                        include ../img/grafik_prozente.svg
+            section.zahlen
+            section.afrika
+            section.nachricht
+            section.msg
+                h1 Afrika wächst
+
+        section.filter
+            .inside
+                .filter-wrapper
+                    .svg-responsive
+                        include ../img/filter.svg
+        section.main
+            .graphic
+                .indicator
+                    .zeromigration Zero Migrations 
+                    .nochange No Change
+                    .nozero No Change + Zero Migrations
+                    .contantfertility Constant Fertility
+                    .constantno Constant Fertility + No Migrations
+                    .zerocontant Zero Migrations + Constant Fertility
+                    .combo Zero Migrations + Constant Fertility + No Change
+                .timeline
+                    .marker
+                    .years
+                        a(href="#nf") 1950
+                        a(href="#tt") 2000
+                        a(href="#tf") 2050
+                        a(href="#to") 2100
+                .map
+                    .svg-responsive
+                        include ../img/grafik.svg
+            section#nf
+                //- p 1950
+            section#tt
+                //- p 2000
+            section#tf
+                //- p 2050
+            section#to
+                //- p 2100
+            section.afrika
+            section.txt
+                .box
+                    p Das Bevölkerungswachstum hält trotz sinkender Geburtenraten wegen der deutlich erhöhten Lebenserwartung an. Jedes Jahr werden in Afrika 74 Millionen Frauen und Mädchen ungewollt schwanger - unter anderem, weil sie nicht verhüten können.
+                    p Bis zum Jahr 2050 werden zwei Milliarden Babys in Afrika geboren werden.
+                    p 60% der jungen Afrikaner sind heute schon arbeitslos.            
+        section.fazit
+            h1 Fazit
+            p Die Wurzeln der anhaltenden Armut in Afrika liegen in der demografischen Situation, die Wohlstandsgewinne vereitelt. Getrieben von einer exorbitanten Geburtenrate, «frisst» die starke Zunahme der Bevölkerung in Afrika einen grossen Teil des Wachstums des Bruttosozialproduktes auf – und die Armut bleibt.
+
+            p Chancen: Nachhaltige Reduktion der Geburtenrate. Familienplanung müsste massiv und flächendeckend angelegt sein, um Wirkung zu zeigen.
+
+            p Zweitens: Intensivierung der Bildung und Ausbildung. Es fehlt an finanziellen Mitteln und an Lehrpersonal, aber auch an Motivation der politischen Klasse, weil Unwissenheit des Volkes zu ihrem Meinungsmonopol beiträgt.
+        .copy
+            p &copy; Myriam Frisano &middot; Anina Gepp &middot; Stephanie Hillig
+        include includes/footer.pug
+    // body end
+// html end

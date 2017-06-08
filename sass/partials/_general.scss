@@ -1,0 +1,15 @@
+section{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.svg-responsive{
+    @include paddinghack(100%, 2546, 1334, "svg");
+}
+
+.mix,
+#main circle{
+    mix-blend-mode: darken;
+}

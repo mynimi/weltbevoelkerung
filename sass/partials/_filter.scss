@@ -1,0 +1,96 @@
+.filter{
+    .inside {
+        @include flexbox(row, wrap, center, center);
+        width: 100%;
+        height: 100%;
+
+        &.shrink{
+            transition: 3s all ease;
+            position: fixed;
+            top: 0;
+            right: 0;
+            transform-origin: 100% 1% 0;
+            transform: scale(.1);
+            z-index: 30;
+            svg{
+                #Layer_9,
+                text{
+                    display: none;
+                }
+            }
+        }
+    }
+    .filtering{
+        transition: .3s all ease;
+
+        &.active{
+            opacity: 1 !important;
+        }
+        &.nonactive{
+            opacity: .4 !important;
+        }
+        &:hover{
+            cursor: pointer;
+            opacity: .8 !important;
+        }
+    }
+
+}
+
+.filter-wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.indicator{
+    position: absolute;
+    top: 30px;
+    right: 150px;
+    text-align: right;
+    div{
+        display: none;
+    }
+}
+
+$list: zeromigration, nochange, nozero, contantfertility, constantno, zerocontant, combo;
+
+.szenario{
+    opacity: 0 !important;
+    transition: .1s all ease;
+}
+
+@each $sz in $list {
+    .#{$sz} {
+        .indicator .#{$sz}{
+            display: block;
+        }
+        .szenario.#{$sz}{
+            opacity: 1 !important;
+        }
+    }
+}
+
+
+#filter.fadeIn{
+    .fl0,
+    .fl1,
+    .fl2{
+        opacity: 0;
+    }
+
+    .fl0{
+        animation: fadein 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+    .fl1{
+        animation: fadein 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+    .fl2{
+        animation: fadein 1s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+    }
+}
