@@ -54,6 +54,18 @@
 
 $list: zeromigration, nochange, nozero, contantfertility, constantno, zerocontant, combo;
 
+.zeromigration{
+    color: $zero-migration;
+}
+
+.nochange{
+    color: $no-change;
+}
+
+.contantfertility{
+    color: $constant-fertility;
+}
+
 .szenario{
     opacity: 0 !important;
     transition: .1s all ease;

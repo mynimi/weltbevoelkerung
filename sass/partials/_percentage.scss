@@ -12,15 +12,15 @@ section.start{
         width: calc(98% - 100px);
         margin: 0 auto;
     }
-}
 
-.msg{
-    background: rgba(black, .7);
-    position: absolute;
-    top: 200vh;
-    left: 0;
-    width: 100%;
-    color: white;
-    @include flexbox(row, wrap, center, center);
-    opacity: 0;
+    svg{
+        #years{
+            display: none;
+        }
+        #Legende{
+            #Bevölkerung{
+                display: none;
+            }
+        }
+    }
 }

@@ -4,17 +4,16 @@ $(document).ready(function(){
         timeline = $('.timeline'),
         marker = $('.marker'),
         perc = $('.percentage'),
-        svgPerc = 'svg#percentage',
+        svgPerc = 'svg#main',
         vh = $(window).height(),
         offsetPercOriginal = perc.offset().top;
 
     /* STICKY GRAPHIC */
     $('.graphic').stick_in_parent();
     $('.percentage').stick_in_parent();
-    $('.msg').stick_in_parent();
 
     /* TITLE PERCENTAGE SECTION */
-    var texts = $(svgPerc+' #Numbers text')
+    var texts = $(svgPerc+' #Percentage text')
     var rectAf = $('svg #Africa rect');
     texts.css('opacity', 0);
 
@@ -36,12 +35,12 @@ $(document).ready(function(){
             rectAf.addClass('fadeOutColor');
         }
 
-        if($('.nachricht').isInViewport()){
-            $('.msg.is_stuck').removeClass('fadeOut');
-            $('.msg.is_stuck').addClass('fadeIn');
+        if($('.msg').isInViewport()){
+            $('svg #AfrikaMsg text').removeClass('fadeOut');
+            $('svg #AfrikaMsg text').addClass('fadeIn');
         } else {
-            $('.msg.is_stuck').removeClass('fadeIn');
-            $('.msg.is_stuck').addClass('fadeOut');
+            $('svg #AfrikaMsg text').removeClass('fadeIn');
+            $('svg #AfrikaMsg text').addClass('fadeOut');
         }
     });
 
@@ -111,9 +110,11 @@ $(document).ready(function(){
         }
 
         if($('.txt').isInViewport()){
+            $('#main .to .Africa cirlce, #main .to .Africa cirlce').addClass('fadeIn');
             $('.box').removeClass('fadeOut');
             $('.box').addClass('fadeIn');
         } else {
+            $('#main .to .Africa cirlce, #main .to .Africa cirlce').removeClass('fadeIn');
             $('.box').removeClass('fadeIn');
             $('.box').addClass('fadeOut');
         }

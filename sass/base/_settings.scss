@@ -103,8 +103,8 @@ $definition-list-border: 1px solid rgba(black, 0.1);
 
 // PROJECT SETTINGS
 //------------------
-$africa-color: red;
-$rectancle-fill: rgba(black, .04);
+$rectancle-fill: rgba(black, .10);
 $zero-migration: darken(adjust-hue(rgb(255, 0, 255), -5deg),1%);
 $no-change: darken(adjust-hue(rgb(0,255,255), -5deg),1%);
 $constant-fertility: darken(adjust-hue(rgb(255, 255, 0), -5deg),1%);
+$africa-color: $no-change;

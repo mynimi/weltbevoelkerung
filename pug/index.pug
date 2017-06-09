@@ -6,34 +6,53 @@ html(lang="de")
 
     body.combo
         .title
-            h1 Hotspot Afrika
-            h2 Keep calm oder Grund zur Panik?    
+            .div
+                h1 Hotspot 
+                    span.africa Afrika
+                h2 Ruhe bewahren oder in Panik verfallen?
         section.start
             .percentage
                 .map
                     .svg-responsive
-                        include ../img/grafik_prozente.svg
+                        include ../img/grafik_neu.svg
             section.zahlen
             section.afrika
-            section.nachricht
             section.msg
-                h1 Afrika wächst
 
         section.filter
+            h3 Was sind die drei Szenarien?
             .inside
                 .filter-wrapper
                     .svg-responsive
-                        include ../img/filter.svg
+                        include ../img/filter_neu.svg
+            h4 Wähle eines der Felder in der Grundfarbe oder eine Mischfarbe an, um dir die einzelnen Szenarien oder eine Kombinationen davon anzuschauen
         section.main
             .graphic
                 .indicator
-                    .zeromigration Zero Migrations 
-                    .nochange No Change
-                    .nozero No Change + Zero Migrations
-                    .contantfertility Constant Fertility
-                    .constantno Constant Fertility + No Migrations
-                    .zerocontant Zero Migrations + Constant Fertility
-                    .combo Zero Migrations + Constant Fertility + No Change
+                    .zeromigration 
+                        span.zeromigration Zero Migrations 
+                    .nochange 
+                        span.nochange No Change
+                    .nozero 
+                        span.nochange No Change 
+                        span + 
+                        span.zeromigration Zero Migrations
+                    .contantfertility 
+                        span.contantfertility Constant Fertility
+                    .constantno 
+                        span.contantfertility Constant Fertility 
+                        span + 
+                        span.zeromigration Zero Migrations
+                    .zerocontant 
+                        span.zeromigration Zero Migrations
+                        span + 
+                        span.contantfertility Constant Fertility
+                    .combo 
+                        span.zeromigration Zero Migrations 
+                        span + 
+                        span.contantfertility Constant Fertility 
+                        span + 
+                        span.nochange No Change
                 .timeline
                     .marker
                     .years
@@ -43,7 +62,7 @@ html(lang="de")
                         a(href="#to") 2100
                 .map
                     .svg-responsive
-                        include ../img/grafik.svg
+                        include ../img/grafik_neu.svg
             section#nf
                 //- p 1950
             section#tt
@@ -52,19 +71,19 @@ html(lang="de")
                 //- p 2050
             section#to
                 //- p 2100
-            section.afrika
             section.txt
                 .box
-                    p Das Bevölkerungswachstum hält trotz sinkender Geburtenraten wegen der deutlich erhöhten Lebenserwartung an. Jedes Jahr werden in Afrika 74 Millionen Frauen und Mädchen ungewollt schwanger - unter anderem, weil sie nicht verhüten können.
-                    p Bis zum Jahr 2050 werden zwei Milliarden Babys in Afrika geboren werden.
-                    p 60% der jungen Afrikaner sind heute schon arbeitslos.            
+                    p Das Bevölkerungswachstum in Afrika hält trotz sinkender Geburtenraten an. Dies, weil die Lebenserwartung immer höher wird. Zudem werden jedes Jahr 74 Millionen afrikanische Frauen und Mädchen ungewollt schwanger - unter anderem, weil sie nicht verhüten können. Bis zum Jahr 2050 werden zwei Milliarden Babys in Afrika zur Welt kommen, wenn die Fertilitätsrate konstant bleibt. Die Zukunft auf dem Arbeitsmarkt sieht für den Nachwuchs nicht vielversprechend aus: Schon heute sind 60% der jungen Afrikaner arbeitslos.
+
         section.fazit
             h1 Fazit
             p Die Wurzeln der anhaltenden Armut in Afrika liegen in der demografischen Situation, die Wohlstandsgewinne vereitelt. Getrieben von einer exorbitanten Geburtenrate, «frisst» die starke Zunahme der Bevölkerung in Afrika einen grossen Teil des Wachstums des Bruttosozialproduktes auf – und die Armut bleibt.
 
-            p Chancen: Nachhaltige Reduktion der Geburtenrate. Familienplanung müsste massiv und flächendeckend angelegt sein, um Wirkung zu zeigen.
+            p Durch die nachhaltige Reduktion der Geburtenrate könnte das Wachstum eingedämmt werden. Die Familienplanung müsste aber massiv und flächendeckend angelegt sein, um Wirkung zu zeigen. 
 
-            p Zweitens: Intensivierung der Bildung und Ausbildung. Es fehlt an finanziellen Mitteln und an Lehrpersonal, aber auch an Motivation der politischen Klasse, weil Unwissenheit des Volkes zu ihrem Meinungsmonopol beiträgt.
+            p Zudem müsste in die Bildung investiert werden. Es fehlt dafür aber an finanziellen Mitteln und an Lehrpersonal, wie auch an Motivation der politischen Klasse. Denn die Unwissenheit des Volkes trägt massgeblich zu ihrem Meinungsmonopol bei.
+            
+            p Egal, welches der Szenarien so oder ähnlich eintreten wird: Afrika ist ein immer grösser werdender Hotspot, der neue Lösungsansätze benötigt, um auf dieser Erde bestehen zu können.
         .copy
             p &copy; Myriam Frisano &middot; Anina Gepp &middot; Stephanie Hillig
         include includes/footer.pug

@@ -1,7 +1,9 @@
+.txt{
+    @include flexbox(row, wrap, flex-end, flex-end);
+}
 .box{
     width: 80%;
     max-width: 700px;
-    margin: 0 auto;
     background: rgba(white, .7);
     font-size: 25px;
     font-weight: normal;
@@ -14,6 +16,13 @@
     height: 100vh;
     .map{
         width: calc(98% - 100px);
+    }
+
+    svg{
+        #Percentage,
+        #AfrikaMsg{
+            display: none;
+        }
     }
 }
 
@@ -42,9 +51,10 @@
         a{
             color: black;
             transition: .5s all ease;
+            font-size: .9em;
 
             &.active{
-                font-size: 1.2em;
+                font-size: 1.3em;
                 font-weight: normal;
             }
         }

@@ -3465,37 +3465,37 @@ section {
 
 @-webkit-keyframes fadeincolor {
   from {
-    fill: rgba(0, 0, 0, 0.04);
+    fill: rgba(0, 0, 0, 0.1);
   }
   to {
-    fill: red;
+    fill: #00fae5;
   }
 }
 
 @keyframes fadeincolor {
   from {
-    fill: rgba(0, 0, 0, 0.04);
+    fill: rgba(0, 0, 0, 0.1);
   }
   to {
-    fill: red;
+    fill: #00fae5;
   }
 }
 
 @-webkit-keyframes fadeoutcolor {
   from {
-    fill: red;
+    fill: #00fae5;
   }
   to {
-    fill: rgba(0, 0, 0, 0.04);
+    fill: rgba(0, 0, 0, 0.1);
   }
 }
 
 @keyframes fadeoutcolor {
   from {
-    fill: red;
+    fill: #00fae5;
   }
   to {
-    fill: rgba(0, 0, 0, 0.04);
+    fill: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -3623,33 +3623,7 @@ section {
 .title {
   font-size: 2em;
   text-align: center;
-  max-width: 700px;
-  margin: 200px auto;
-}
-
-section.start {
-  height: 400vh;
-}
-
-.percentage {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.percentage .map {
-  width: calc(98% - 100px);
-  margin: 0 auto;
-}
-
-.msg {
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 200vh;
-  left: 0;
-  width: 100%;
-  color: white;
+  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3670,13 +3644,62 @@ section.start {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  opacity: 0;
+}
+
+.title .africa {
+  color: #00fae5;
+}
+
+section.start {
+  height: 400vh;
+}
+
+.percentage {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.percentage .map {
+  width: calc(98% - 100px);
+  margin: 0 auto;
+}
+
+.percentage svg #years {
+  display: none;
+}
+
+.percentage svg #Legende #Bevölkerung {
+  display: none;
+}
+
+.txt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .box {
   width: 80%;
   max-width: 700px;
-  margin: 0 auto;
   background: rgba(255, 255, 255, 0.7);
   font-size: 25px;
   font-weight: normal;
@@ -3712,6 +3735,11 @@ section.start {
 
 .graphic .map {
   width: calc(98% - 100px);
+}
+
+.graphic svg #Percentage,
+.graphic svg #AfrikaMsg {
+  display: none;
 }
 
 .timeline {
@@ -3762,10 +3790,11 @@ section.start {
   -webkit-transition: .5s all ease;
   -o-transition: .5s all ease;
   transition: .5s all ease;
+  font-size: .9em;
 }
 
 .timeline .years a.active {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: normal;
 }
 
@@ -3848,6 +3877,18 @@ section.start {
 
 .indicator div {
   display: none;
+}
+
+.zeromigration {
+  color: #e500fa;
+}
+
+.nochange {
+  color: #00fae5;
+}
+
+.contantfertility {
+  color: #fae500;
 }
 
 .szenario {
@@ -3946,98 +3987,6 @@ section.start {
   animation-fill-mode: forwards;
 }
 
-.ab0 rect {
-  fill: rgba(0, 0, 0, 0.04);
-}
-
-.ab1 {
-  fill: #FFFFFF;
-}
-
-.ab2 {
-  font-family: 'Roboto';
-  fill: black;
-}
-
-.ab3 {
-  font-size: 100px;
-}
-
-.ab4,
-.ab14 {
-  font-family: 'Roboto';
-}
-
-.ab5 {
-  font-size: 20.0055px;
-}
-
-.ab6 {
-  display: none;
-}
-
-.ab7 {
-  display: inline;
-  fill: #F91515;
-}
-
-.ab8 {
-  display: inline;
-  fill: #F7E116;
-}
-
-.ab9 {
-  display: inline;
-  fill: #E05B19;
-}
-
-.ab10 {
-  display: inline;
-  fill: #4864D8;
-}
-
-.ab11 {
-  display: inline;
-  fill: #A325C1;
-}
-
-.ab12 {
-  display: inline;
-  fill: #5FA53A;
-}
-
-.ab13 {
-  display: inline;
-}
-
-.ab15 {
-  font-size: 24.7528px;
-}
-
-.ab16 {
-  fill: #F91515;
-}
-
-.ab17 {
-  fill: #F7E116;
-}
-
-.ab18 {
-  fill: #E05B19;
-}
-
-.ab19 {
-  fill: #4864D8;
-}
-
-.ab20 {
-  fill: #A325C1;
-}
-
-.ab21 {
-  fill: #5FA53A;
-}
-
 .fl0 {
   fill: #00fae5;
 }
@@ -4050,48 +3999,103 @@ section.start {
   fill: #fae500;
 }
 
-.fl3, .fl5 {
-  font-family: 'Roboto';
+.fl4 {
+  fill: #010101;
 }
 
-.fl4 {
-  font-size: 24.7528px;
+.fl5 {
+  font-family: 'Roboto';
 }
 
 .fl6 {
-  font-size: 50px;
+  font-size: 43px;
 }
 
-.st0 rect {
-  fill: rgba(0, 0, 0, 0.04);
+.fl7 {
+  fill: none;
+  stroke: #010101;
+  stroke-miterlimit: 10;
 }
 
-.st1 {
-  fill: white;
+.fl8 {
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit: 10;
 }
 
-.st2 {
-  fill: #00fae5;
-}
-
-.st3 {
-  fill: #e500fa;
-}
-
-.st4 {
-  fill: #fae500;
-}
-
-.st5 {
-  font-family: 'Roboto';
-}
-
-.st6 {
-  font-size: 20.0055px;
+#Continents rect,
+#Legende rect {
+  fill: rgba(0, 0, 0, 0.1);
 }
 
 #legend {
   fill: black !important;
+}
+
+.st0 {
+  stroke: #FFFFFF;
+  stroke-miterlimit: 10;
+}
+
+.st1 {
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit: 10;
+}
+
+.st2 {
+  font-family: 'Roboto';
+}
+
+.st3 {
+  font-size: 30px;
+}
+
+.st4 {
+  opacity: 2e;
+}
+
+.st5 {
+  fill: #FFFFFF;
+}
+
+.st6 {
+  font-size: 62.0303px;
+}
+
+.st7 {
+  display: none;
+}
+
+.st8 {
+  display: inline;
+}
+
+.st9 {
+  fill: #00fae5;
+}
+
+.st10 {
+  fill: #fae500;
+}
+
+.st11 {
+  fill: #e500fa;
+}
+
+.st12 {
+  display: inline;
+  fill: #00fae5;
+}
+
+.st13 {
+  display: inline;
+  fill: #e500fa;
+}
+
+.st14 {
+  display: inline;
+  fill: #fae500;
 }
 
 .fazit {
@@ -4133,4 +4137,8 @@ section.start {
 .copy {
   font-size: .9em;
   text-align: center;
+}
+
+h4 {
+  font-weight: 300 !important;
 }
