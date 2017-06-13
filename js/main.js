@@ -15,7 +15,15 @@ $(document).ready(function(){
     /* TITLE PERCENTAGE SECTION */
     var texts = $(svgPerc+' #Percentage text')
     var rectAf = $('svg #Africa rect');
+
+    // make sure nothing unwanted shows on load.
     texts.css('opacity', 0);
+    texts.removeClass('fadeIn');
+    texts.addClass('fadeOut');
+    rectAf.removeClass('fadeInColor');
+    rectAf.addClass('fadeOutColor');
+    $('svg #AfrikaMsg text').removeClass('fadeIn');
+    $('svg #AfrikaMsg text').addClass('fadeOut');
 
     $(window).scroll(function(){
         if($('.zahlen').isInViewport()){
@@ -46,6 +54,8 @@ $(document).ready(function(){
 
     /* FILTERING */
     var svg = $('#filter');
+    svg.removeClass('fadeIn');
+
     $(window).scroll(function(){
         if($('.filter').isInViewport()){
             svg.addClass('fadeIn');
@@ -63,13 +73,15 @@ $(document).ready(function(){
         $('body').attr('class', classes); // add classes of current element to body
     });
 
+    $('.filter .filter-wrapper').removeClass('shrink');
+
     $(window).scroll(function(){
         if($('.main').isInViewport()){
-            $('.filter .inside').addClass('shrink');
+            $('.filter .filter-wrapper').addClass('shrink');
             $('.graphic').removeClass('fadeOut');
             $('.graphic').addClass('fadeIn');
         } else {
-            $('.filter .inside').removeClass('shrink');
+            $('.filter .filter-wrapper').removeClass('shrink');
             $('.graphic').removeClass('fadeIn');
             $('.graphic').addClass('fadeOut');
         }
