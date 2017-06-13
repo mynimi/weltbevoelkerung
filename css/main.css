@@ -3170,6 +3170,7 @@ html, body {
   font-family: "Roboto", "Calibri", "Arial", sans-serif;
   font-size: 19px;
   font-weight: 300;
+  color: #262626;
 }
 
 body {
@@ -3468,7 +3469,7 @@ section {
     fill: rgba(0, 0, 0, 0.1);
   }
   to {
-    fill: #00fae5;
+    fill: #00f5e0;
   }
 }
 
@@ -3477,13 +3478,13 @@ section {
     fill: rgba(0, 0, 0, 0.1);
   }
   to {
-    fill: #00fae5;
+    fill: #00f5e0;
   }
 }
 
 @-webkit-keyframes fadeoutcolor {
   from {
-    fill: #00fae5;
+    fill: #00f5e0;
   }
   to {
     fill: rgba(0, 0, 0, 0.1);
@@ -3492,7 +3493,7 @@ section {
 
 @keyframes fadeoutcolor {
   from {
-    fill: #00fae5;
+    fill: #00f5e0;
   }
   to {
     fill: rgba(0, 0, 0, 0.1);
@@ -3647,7 +3648,7 @@ section {
 }
 
 .title .africa {
-  color: #00fae5;
+  color: #00f5e0;
 }
 
 section.start section {
@@ -3700,7 +3701,7 @@ section.start section {
 }
 
 #AfrikaMsg text {
-  fill: #00fae5;
+  fill: #00f5e0;
 }
 
 .txt {
@@ -3815,7 +3816,7 @@ section.start section {
 }
 
 .timeline .years a {
-  color: black;
+  color: #262626;
   -webkit-transition: .5s all ease;
   -o-transition: .5s all ease;
   transition: .5s all ease;
@@ -3829,6 +3830,11 @@ section.start section {
 
 .filter {
   height: 100vh;
+  min-height: 10px;
+  padding-top: 100px;
+  -webkit-transition: .5s all ease;
+  -o-transition: .5s all ease;
+  transition: .5s all ease;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3857,6 +3863,34 @@ section.start section {
   font-size: 1.2em;
 }
 
+.filter.shrink {
+  height: 30vh;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.filter.shrink .filter-wrapper {
+  -webkit-transition: .5s all ease;
+  -o-transition: .5s all ease;
+  transition: .5s all ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform-origin: 100% 1% 0;
+  -ms-transform-origin: 100% 1% 0;
+  transform-origin: 100% 1% 0;
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+  z-index: 30;
+}
+
+.filter.shrink .filter-wrapper svg #Layer_9,
+.filter.shrink .filter-wrapper svg text {
+  display: none;
+}
+
 .filter .inside {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3882,27 +3916,6 @@ section.start section {
   height: auto;
 }
 
-.filter .inside .filter-wrapper.shrink {
-  -webkit-transition: .5s all ease;
-  -o-transition: .5s all ease;
-  transition: .5s all ease;
-  position: fixed;
-  top: 0;
-  right: 0;
-  -webkit-transform-origin: 100% 1% 0;
-  -ms-transform-origin: 100% 1% 0;
-  transform-origin: 100% 1% 0;
-  -webkit-transform: scale(0.1);
-  -ms-transform: scale(0.1);
-  transform: scale(0.1);
-  z-index: 30;
-}
-
-.filter .inside .filter-wrapper.shrink svg #Layer_9,
-.filter .inside .filter-wrapper.shrink svg text {
-  display: none;
-}
-
 .filter .filtering {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -3914,7 +3927,7 @@ section.start section {
 }
 
 .filter .filtering.nonactive {
-  opacity: .4 !important;
+  fill-opacity: .4 !important;
 }
 
 .filter .filtering:hover {
@@ -3930,8 +3943,8 @@ section.start section {
 
 .indicator {
   position: absolute;
-  top: 30px;
-  right: 150px;
+  top: 12px;
+  right: 85px;
   text-align: right;
 }
 
@@ -3940,15 +3953,15 @@ section.start section {
 }
 
 span.zeromigration {
-  color: #e500fa;
+  color: #e000f5;
 }
 
 span.nochange {
-  color: #00fae5;
+  color: #f5e000;
 }
 
 span.contantfertility {
-  color: #fae500;
+  color: #00f5e0;
 }
 
 .szenario {
@@ -4048,15 +4061,15 @@ span.contantfertility {
 }
 
 .fl0 {
-  fill: #00fae5;
+  fill: #f5e000;
 }
 
 .fl1 {
-  fill: #e500fa;
+  fill: #e000f5;
 }
 
 .fl2 {
-  fill: #fae500;
+  fill: #00f5e0;
 }
 
 .fl4 {
@@ -4089,7 +4102,7 @@ span.contantfertility {
 }
 
 #legend {
-  fill: black !important;
+  fill: #262626 !important;
 }
 
 .st0 {
@@ -4123,39 +4136,47 @@ span.contantfertility {
   font-size: 62.0303px;
 }
 
-.st7 {
-  display: none;
-}
-
 .st8 {
   display: inline;
 }
 
 .st9 {
-  fill: #00fae5;
+  fill: #f5e000;
 }
 
 .st10 {
-  fill: #fae500;
+  fill: #00f5e0;
 }
 
 .st11 {
-  fill: #e500fa;
+  fill: #e000f5;
 }
 
 .st12 {
   display: inline;
-  fill: #00fae5;
+  fill: #f5e000;
 }
 
 .st13 {
   display: inline;
-  fill: #e500fa;
+  fill: #e000f5;
 }
 
 .st14 {
   display: inline;
-  fill: #fae500;
+  fill: #00f5e0;
+}
+
+.nochange circle {
+  fill: #f5e000 !important;
+}
+
+.contantfertility circle {
+  fill: #00f5e0 !important;
+}
+
+.zeromigration circle {
+  fill: #e000f5 !important;
 }
 
 .fazit {

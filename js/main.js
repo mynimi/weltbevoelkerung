@@ -54,7 +54,6 @@ $(document).ready(function(){
 
     /* FILTERING */
     var svg = $('#filter');
-    svg.removeClass('fadeIn');
 
     $(window).scroll(function(){
         if($('.filter').isInViewport()){
@@ -65,6 +64,7 @@ $(document).ready(function(){
     });
     svg.find('.filtering').click(function(){
         var classes = $(this).attr('class'); // store all classes and add them to body
+        classes = classes.replace('fl', ''); // destry any group color classes
         $(this).removeClass('nonactive');
         $(this).addClass('active');
         $('.filtering').not($(this)).removeClass('active');
@@ -73,28 +73,29 @@ $(document).ready(function(){
         $('body').attr('class', classes); // add classes of current element to body
     });
 
-    $('.filter .filter-wrapper').removeClass('shrink');
-
+    $('.filter').removeClass('shrink');
     $(window).scroll(function(){
         if($('.main').isInViewport()){
-            $('.filter .filter-wrapper').addClass('shrink');
+            $('.filter').addClass('shrink');
             $('.graphic').removeClass('fadeOut');
             $('.graphic').addClass('fadeIn');
         } else {
-            $('.filter .filter-wrapper').removeClass('shrink');
+            $('.filter').removeClass('shrink');
             $('.graphic').removeClass('fadeIn');
             $('.graphic').addClass('fadeOut');
         }
         var nf = $('svg#main .nf circle'),
             tt = $('svg#main .tt circle'),
             tf = $('svg#main .tf circle'),
-            to = $('svg#main .to circle, svg#main .to ellipse'),
+            to = $('svg#main .to circle'),
             hideClass = 'peopleHide',
             showClass = 'peopleShow';
 
         if($('#nf').isInViewport()){
             nf.removeClass(hideClass);
             nf.addClass(showClass);
+            $('svg#main .to .Africa circle').addClass(hideClass);
+            $('svg#main .to .Africa circle').removeClass(showClass);
         } else {
             nf.removeClass(showClass);
             nf.addClass(hideClass);
@@ -102,6 +103,8 @@ $(document).ready(function(){
         if($('#tt').isInViewport()){
             tt.removeClass(hideClass);
             tt.addClass(showClass);
+            $('svg#main .to .Africa circle').addClass(hideClass);
+            $('svg#main .to .Africa circle').removeClass(showClass);
         } else {
             tt.removeClass(showClass);
             tt.addClass(hideClass);
@@ -109,6 +112,8 @@ $(document).ready(function(){
         if($('#tf').isInViewport()){
             tf.removeClass(hideClass);
             tf.addClass(showClass);
+            $('svg#main .to .Africa circle').addClass(hideClass);
+            $('svg#main .to .Africa circle').removeClass(showClass);
         } else {
             tf.removeClass(showClass);
             tf.addClass(hideClass);
@@ -119,14 +124,15 @@ $(document).ready(function(){
         } else {
             to.removeClass(showClass);
             to.addClass(hideClass);
+            $('svg#main .to .Africa circle').addClass(showClass);
         }
 
         if($('.txt').isInViewport()){
-            $('#main .to .Africa cirlce, #main .to .Africa cirlce').addClass('fadeIn');
+            $('svg#main .to .Africa circle').removeClass('peopleHide');
+            $('svg#main .to .Africa circle').addClass('fadeIn');
             $('.box').removeClass('fadeOut');
             $('.box').addClass('fadeIn');
         } else {
-            $('#main .to .Africa cirlce, #main .to .Africa cirlce').removeClass('fadeIn');
             $('.box').removeClass('fadeIn');
             $('.box').addClass('fadeOut');
         }

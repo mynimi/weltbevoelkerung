@@ -1,10 +1,13 @@
 // TOOLBOX COLORS
 //---------------------------------------------------------------------
 $white: #FDFDFD;
-$black: #202020;
+$black: lighten(black, 15%);
 $darkgray: #333;
 $blood: #730F17;
 $teal: #54706A;
 
 // PROJECT COLORS
 //---------------------------------------------------------------------
+$cyan: saturate(darken(adjust-hue(rgb(0,255,255), -5deg), 2%), 40%);
+$magenta: saturate(darken(adjust-hue(rgb(255, 0, 255), -5deg), 2%), 40%);
+$yellow: saturate(darken(adjust-hue(rgb(255, 255, 0), -5deg), 2%), 40%);

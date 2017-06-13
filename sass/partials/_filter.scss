@@ -1,17 +1,19 @@
 .filter{
     height: 100vh;
+    min-height: 10px;
+    padding-top: 100px;
+    transition: .5s all ease;
     @include flexbox(column, wrap, flex-start, center);
     p{
         max-width: 500px;
         line-height: 1.3;
         font-size: 1.2em;
     }
-    .inside {
-        @include flexbox(row, wrap, flex-start, center);
-        width: 100%;
-        height: auto;
 
-        .filter-wrapper.shrink{
+    &.shrink{
+        height: 30vh;
+        transition: .3s all ease;
+        .filter-wrapper{
             transition: .5s all ease;
             position: fixed;
             top: 0;
@@ -27,6 +29,12 @@
             }
         }
     }
+    .inside {
+        @include flexbox(row, wrap, flex-start, center);
+        width: 100%;
+        height: auto;
+
+    }
     .filtering{
         transition: .3s all ease;
 
@@ -34,7 +42,8 @@
             opacity: 1 !important;
         }
         &.nonactive{
-            opacity: .4 !important;
+            // opacity: .4 !important;
+            fill-opacity: .4 !important;
         }
         &:hover{
             cursor: pointer;
@@ -52,8 +61,8 @@
 
 .indicator{
     position: absolute;
-    top: 30px;
-    right: 150px;
+    top: 12px;
+    right: 85px;
     text-align: right;
     div{
         display: none;

@@ -542,7 +542,7 @@
 				<circle class="st7" cx="1538" cy="199" r="5"/>
 			</g>
 		</g>
-		<g id="constantfertility">
+		<g id="constantfertility" class="szenario contantfertility constantno zerocontant combo">
 			<g id="Asia_copy">
 				<circle class="st8" cx="1642" cy="97" r="5"/>
 				<circle class="st8" cx="1653" cy="97" r="5"/>
@@ -933,7 +933,7 @@
 				<circle class="st8" cx="1538" cy="199" r="5"/>
 			</g>
 		</g>
-		<g id="zeromigration">
+		<g id="zeromigration" class="szenario zeromigration nozero zerocontant combo">
 			<g id="Asia_copy_2">
 				<circle class="st9" cx="1642" cy="97" r="5"/>
 				<circle class="st9" cx="1653" cy="97" r="5"/>

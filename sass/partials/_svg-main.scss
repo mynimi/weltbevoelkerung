@@ -4,7 +4,7 @@
 }
 
 #legend{
-    fill: black !important;
+    fill: $black !important;
 }
 
 .st0{stroke:#FFFFFF;stroke-miterlimit:10;}
@@ -14,7 +14,7 @@
 .st4{opacity:4.000000e-02;}
 .st5{fill:#FFFFFF;}
 .st6{font-size:62.0303px;}
-.st7{display:none;}
+// .st7{display:none;}
 .st8{display:inline;}
 .st9{fill:$no-change;}
 .st10{fill:$constant-fertility;}
@@ -22,3 +22,21 @@
 .st12{display:inline;fill:$no-change;}
 .st13{display:inline;fill:$zero-migration;}
 .st14{display:inline;fill:$constant-fertility;}
+
+.nochange{
+    circle{
+        fill: $no-change !important;
+    }
+}
+
+.contantfertility{
+    circle{
+        fill: $constant-fertility !important;
+    }
+}
+
+.zeromigration{
+    circle{
+        fill: $zero-migration !important;
+    }
+}
